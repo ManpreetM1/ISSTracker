@@ -6,7 +6,7 @@
 ### Windows
   1. open command prompt
 
-  2. navigate to folder where ISSTracker was installed and use following commands to create a runnable jar and to run it using java (Requires Maven)
+  2. navigate to folder where the ISSTracker folder was installed and use following commands to create a runnable jar and to run it using java (Requires Maven)
 
   ```
   mvn compile
