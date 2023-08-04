@@ -138,7 +138,7 @@ public class Graphics {
 		uLabel[6] = new JLabel("Timezone:");
 		uLabel[7] = new JLabel("Country Code:");
 
-		JLabel[] cLabel = new JLabel[8];
+		final JLabel[] cLabel = new JLabel[8];
 
 		cLabel[0] = new JLabel(String.valueOf(ah.issloc.getLat()));
 		cLabel[1] = new JLabel(String.valueOf(ah.issloc.getLon()));
