@@ -20,4 +20,4 @@
 
 -Maven
 
--Google/Gson (Included as a jar)
+-google/gson
