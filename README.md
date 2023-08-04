@@ -1,4 +1,6 @@
 # ISSTracker
+  This is a Java application that graphically displays real-time data regarding the ISS and it's position above the earth using this [API](https://wheretheiss.at/w/developer).
+
 
 # Installation
 ### Windows
