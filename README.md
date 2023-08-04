@@ -19,5 +19,3 @@
 -Java 17
 
 -Maven
-
--google/gson
