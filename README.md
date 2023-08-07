@@ -4,9 +4,9 @@
 
 # Installation
 ### Windows
-  1. Open command prompt
+  1. After Downloading the zip file and extracting the contents, open command prompt/powershell
 
-  2. Navigate to folder where the ISSTracker folder was installed and use following commands to create a runnable jar and to run it using java (Requires Maven and Java)
+  2. Navigate to where the ISSTracker folder was installed and use following commands to create a runnable jar and to run it using java (Requires Maven and Java)
 
   ```
   mvn compile
