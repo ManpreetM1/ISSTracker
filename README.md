@@ -1,6 +1,8 @@
 # ISSTracker
   This is a Java application that graphically displays real-time data regarding the ISS and it's position above the earth using this [API](https://wheretheiss.at/w/developer). 
   
+  This is a work in progress and I hope to add some more related features to extend the functionality and usefulness of the application.
+  
 
 # Installation
 ### Windows
@@ -13,5 +15,12 @@
   
   mvn package
   
-  java -jar target/ISSTracker-0.01-SNAPSHOT-jar-with-dependencies.jar
+  java -jar target\ISSTracker-0.01-SNAPSHOT-jar-with-dependencies.jar
   ```
+
+# How To Use
+
+  Currently there is only a single functional page. After running the application you will see two buttons on the bottom, the left button takes you to a page which will display the realtime data for the ISS. 
+  
+  This page also includes a google maps link and an update button, which will update the information with the latest data provided by the api.
+  
