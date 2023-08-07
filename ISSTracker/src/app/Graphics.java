@@ -49,7 +49,7 @@ public class Graphics {
 		convertPane = new JPanel(new BorderLayout());
 		startScreen = new JPanel(new BorderLayout());
 		mainPanel = new JPanel(crd);
-		window = new JFrame("PlaceHolder Text");
+		window = new JFrame("ISSTracker");
 	}
 	
 	//Setup JPanels basic hierarchy

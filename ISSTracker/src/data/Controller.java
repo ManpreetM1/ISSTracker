@@ -11,7 +11,7 @@ public class Controller{
         ah = new AppHandler();
         gapp = new Graphics(ah);
         
-        Thread t = new Thread() {
+        Thread t = new Thread("Background") {
             public void run() {
                 while(true) {
                     ah.update();
