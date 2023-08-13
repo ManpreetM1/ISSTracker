@@ -17,15 +17,18 @@ public class AppHandler {
 
     public Location issloc;
     public GeoInfo g;
+    HttpClient client;
+    Gson gson;
 
     public AppHandler() {
+       client = HttpClient.newHttpClient();
+       gson = new Gson();
        update();
     }
 
     //Update ISS info using online api response
     public void update() {
-        HttpClient client = HttpClient.newHttpClient();
-        Gson gson = new Gson();
+        
         try {
             HttpRequest get = HttpRequest.newBuilder()
             .uri(new URI("https://api.wheretheiss.at/v1/satellites/25544"))
