@@ -33,7 +33,7 @@ public class Graphics {
 	JPanel mainPanel;
 	JPanel startScreen;
 	JPanel mainPane;
-	JPanel contentPane;
+	JPanel settingsPane;
 	JPanel convertPane;
 
     AppHandler ah;
@@ -45,7 +45,7 @@ public class Graphics {
 	//Initialize JPanels and JFrame	
 	public void init() {
 		mainPane = new JPanel();
-		contentPane = new JPanel(new BorderLayout());
+		settingsPane = new JPanel(new BorderLayout());
 		convertPane = new JPanel(new BorderLayout());
 		startScreen = new JPanel(new BorderLayout());
 		mainPanel = new JPanel(crd);
@@ -57,7 +57,7 @@ public class Graphics {
 		startScreen.add(mainPane);
 		mainPanel.add(startScreen, "1");
 		mainPanel.add(convertPane, "2");
-		mainPanel.add(contentPane, "3");
+		mainPanel.add(settingsPane, "3");
 		window.add(mainPanel);
 	}
 	
@@ -212,8 +212,8 @@ public class Graphics {
 		
 	}
 
-	public void instructionSetup() {
-		JPanel ins = new JPanel(new GridBagLayout());
+	public void settingsSetup() {
+		JPanel settings = new JPanel(new GridBagLayout());
 
 	}
 
@@ -224,10 +224,6 @@ public class Graphics {
 
 	//Sets up main start screen
 	public void makeStartScreen() {
-		JLabel mainLabel = new JLabel("Welcome", SwingConstants.CENTER);
-		mainLabel.setFont(new Font(null, Font.BOLD, 24));
-		mainLabel.setForeground(Color.GREEN);
-		
 		init();
 
 		JButton one = new JButton("ISS Info");
@@ -249,11 +245,11 @@ public class Graphics {
 		
 		
 		makeScreen("ISS Location", convertPane);
-		makeScreen("Extra Info", contentPane);
+		makeScreen("Settings", settingsPane);
 		makeScreen("Welcome", mainPane);
 
 	 	converterSetup();
-		instructionSetup();
+		settingsSetup();
 
 		JPanel bPanel = new JPanel();
 		bPanel.setBackground(Color.DARK_GRAY);
