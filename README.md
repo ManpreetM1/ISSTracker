@@ -22,5 +22,5 @@
 
   Currently there is only a single functional page. After running the application you will see two buttons on the bottom, the left button takes you to a page which will display the realtime data for the ISS. 
   
-  This page also includes a google maps link and an update button, which will update the information with the latest data provided by the api.
+  This page also includes a google maps link and an update button, which will update the information with the latest data provided by the api. This data includes the longitude, latitude, altitude, velocity, timezone, and country code directly from the API. It also includes the orbital period and quadrant which is calculated inside of the app using some of these values.
   
