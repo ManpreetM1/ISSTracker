@@ -20,7 +20,12 @@
 
 # How To Use
 
-  Currently there is only a single functional page. After running the application you will see two buttons on the bottom, the left button takes you to a page which will display the realtime data for the ISS. 
+  After running the application you will see two buttons on the bottom.
   
-  This page also includes a google maps link and an update button, which will update the information with the latest data provided by the api. This data includes the longitude, latitude, altitude, velocity, timezone, and country code directly from the API. It also includes the orbital period and quadrant which is calculated inside of the app using some of these values.
+  The left button takes you to a page which will display the realtime data for the ISS. 
+  - This data includes the longitude, latitude, altitude, velocity, timezone, and country code directly from the API. It also includes the orbital period and quadrant which is calculated inside of the app using some of these values.
+  - This page also includes a google maps link and an update button, which will update the information with the latest data provided by the api.
+
+  The right button will take you to a page that will allow you to change a few settings for the applicaton.
+  - Currently this only shows an option to enable/disable the console log, which displays the JSON data from the api thats being requested in the background
   
