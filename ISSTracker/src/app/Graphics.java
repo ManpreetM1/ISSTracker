@@ -229,6 +229,11 @@ public class Graphics {
 			public void actionPerformed(ActionEvent e) {
 				//inverts this boolean for console log
 				enableLog = !enableLog;
+				if(enableLog) { 
+					System.out.println("Console Log Enabled");
+				} else {
+					System.out.println("Console Log Disabled");
+				}
 				ah.setLog(enableLog);
 			}
 			
