@@ -15,10 +15,14 @@ import data.Location;
 
 public class AppHandler {
 
-    public Location issloc;
-    public GeoInfo g;
+    protected Location issloc;
+    protected GeoInfo g;
     HttpClient client;
     Gson gson;
+    
+    Boolean consoleLog = false;
+    
+   
 
     public AppHandler() {
        client = HttpClient.newHttpClient();
@@ -26,6 +30,19 @@ public class AppHandler {
        update();
     }
 
+    
+    public void setLog(Boolean enable) {
+    	consoleLog = enable;
+    }
+    
+    public Location getISSLoc() {
+    	return issloc;
+    }
+    
+    public GeoInfo getGeoInfo() {
+    	return g;
+    }
+    
     //Update ISS info using online api response
     public void update() {
         
@@ -35,7 +52,7 @@ public class AppHandler {
             .GET()
             .build();
             HttpResponse<String> response = client.send(get,BodyHandlers.ofString());
-            System.out.println(response.body());
+            if(consoleLog) System.out.println(response.body());
             issloc = gson.fromJson(response.body(), Location.class);
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,7 +64,7 @@ public class AppHandler {
             .GET()
             .build();
             HttpResponse<String> response = client.send(get,BodyHandlers.ofString());
-            System.out.println(response.body());
+            if(consoleLog) System.out.println(response.body());
             g = gson.fromJson(response.body(), GeoInfo.class);
         } catch (Exception e) {
             e.printStackTrace();

@@ -25,6 +25,9 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+import data.GeoInfo;
+import data.Location;
+
 
 public class Graphics {
 	CardLayout crd = new CardLayout();
@@ -37,13 +40,18 @@ public class Graphics {
 	JPanel convertPane;
 
     AppHandler ah;
+    protected Location issloc;
+    protected GeoInfo g;
 
 	public String link;
 	public JComboBox<String> curr;
 	public JTextField amount;
+	public Boolean enableLog = false;
 	
 	//Initialize JPanels and JFrame	
 	public void init() {
+		issloc = ah.getISSLoc();
+		g = ah.getGeoInfo();
 		mainPane = new JPanel();
 		settingsPane = new JPanel(new BorderLayout());
 		convertPane = new JPanel(new BorderLayout());
@@ -179,8 +187,6 @@ public class Graphics {
 				cLabel[7].setText(ah.g.getCountryCode());
 
 				link = ah.g.getMapURL();
-		
-				System.out.println("Timestamp: " + ah.issloc.getTime());
 			}
 		});
 
@@ -206,20 +212,30 @@ public class Graphics {
 		enter.setFocusable(false);
 		convertContent.add(enter, c);
 		
-		convertPane.add(convertL, BorderLayout.NORTH);
+		//convertPane.add(convertL, BorderLayout.NORTH);
 		convertPane.add(convertContent, BorderLayout.CENTER);
 
 		
 	}
 
 	public void settingsSetup() {
-		JPanel settings = new JPanel(new GridBagLayout());
-
-	}
-
-	
-	public String getText(JTextField fieldname) {
-		return fieldname.getText();
+		JPanel settings = new JPanel(new FlowLayout());
+		settings.setBackground(Color.BLACK);
+		
+		JButton log = new JButton("Enable/Disable Console Log");
+		setButtonColor(log, false);
+		log.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//inverts this boolean for console log
+				enableLog = !enableLog;
+				ah.setLog(enableLog);
+			}
+			
+		});
+		
+		settings.add(log);
+		settingsPane.add(settings, BorderLayout.CENTER);
 	}
 
 	//Sets up main start screen
